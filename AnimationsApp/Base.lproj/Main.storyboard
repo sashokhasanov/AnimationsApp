@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJ1-Cp-EOO">
-                                <rect key="frame" x="67" y="50" width="186" height="104.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJ1-Cp-EOO" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="67" y="60" width="186" height="104.5"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nJ1-Cp-EOO" secondAttribute="height" multiplier="16:9" id="Aub-zs-j2Q"/>
@@ -41,50 +41,50 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="cuz-hy-FaI"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hQb-z1-7vr">
-                                <rect key="frame" x="95" y="364.5" width="130" height="92.5"/>
+                                <rect key="frame" x="95" y="352" width="130" height="105"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preset:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXs-jQ-CYg">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curve:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGC-Pu-A94">
-                                        <rect key="frame" x="0.0" y="19.5" width="130" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="0.0" y="22" width="130" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Force:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms9-D4-qxG">
-                                        <rect key="frame" x="0.0" y="39" width="130" height="14.5"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                        <rect key="frame" x="0.0" y="44" width="130" height="17"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDm-vN-dHN">
-                                        <rect key="frame" x="0.0" y="58.5" width="130" height="14.5"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                        <rect key="frame" x="0.0" y="66" width="130" height="17"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSM-bL-hfu">
-                                        <rect key="frame" x="0.0" y="78" width="130" height="14.5"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                        <rect key="frame" x="0.0" y="88" width="130" height="17"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="zGC-Pu-A94" firstAttribute="centerX" secondItem="hQb-z1-7vr" secondAttribute="centerX" id="N62-Bm-Y9W"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nJ1-Cp-EOO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="9uY-vI-m2y"/>
+                            <constraint firstItem="nJ1-Cp-EOO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="9uY-vI-m2y"/>
                             <constraint firstItem="mK3-4y-qgZ" firstAttribute="top" secondItem="hQb-z1-7vr" secondAttribute="bottom" constant="30" id="AJ0-od-Ka7"/>
                             <constraint firstItem="hQb-z1-7vr" firstAttribute="width" secondItem="mK3-4y-qgZ" secondAttribute="width" id="L97-wl-MBQ"/>
                             <constraint firstItem="hQb-z1-7vr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UfH-d2-3DF"/>
@@ -95,6 +95,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mK3-4y-qgZ" secondAttribute="bottom" constant="50" id="uee-uS-k3v"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animatedView" destination="nJ1-Cp-EOO" id="f0Z-hc-lyT"/>
+                        <outlet property="animationButton" destination="mK3-4y-qgZ" id="p36-Vf-Xeq"/>
+                        <outlet property="curveLabel" destination="zGC-Pu-A94" id="Dsx-fg-0dg"/>
+                        <outlet property="delayLabel" destination="SSM-bL-hfu" id="jQA-sf-LZN"/>
+                        <outlet property="durationLabel" destination="LDm-vN-dHN" id="oz2-lV-1YT"/>
+                        <outlet property="forceLabel" destination="ms9-D4-qxG" id="JAu-r7-gBm"/>
+                        <outlet property="presetLabel" destination="PXs-jQ-CYg" id="k7J-u3-jna"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
