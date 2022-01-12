@@ -19,13 +19,7 @@ class AnimationsViewController: UIViewController {
     @IBOutlet weak var delayLabel: UILabel!
     
     // MARK: - Private properties
-    private var nextPreset = ""
-    
-    // MARK: - Override methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        nextPreset = getRandomPreset()
-    }
+    private var currentAnimation = AnimationModel.getRandomAnimation()
 
     // MARK: - IBActions
     @IBAction func buttonPressed() {
@@ -38,32 +32,28 @@ class AnimationsViewController: UIViewController {
         updateAnimatedView()
         updateLabels()
         
-        nextPreset = getRandomPreset()
+        currentAnimation = AnimationModel.getRandomAnimation()
         updateButton()
     }
     
     private func updateAnimatedView() {
-        animatedView.animation = nextPreset
-        animatedView.curve = (Spring.AnimationCurve.allCases.randomElement() ?? .easeIn).rawValue
-        animatedView.force = CGFloat.random(in: 0.5...1)
-        animatedView.duration = CGFloat.random(in: 0.5...1)
-        animatedView.delay = CGFloat.random(in: 0...0.2)
+        animatedView.animation = currentAnimation.animation
+        animatedView.curve = currentAnimation.curve
+        animatedView.force = currentAnimation.force
+        animatedView.duration = currentAnimation.duration
+        animatedView.delay = currentAnimation.delay
     }
     
     private func updateLabels() {
-        presetLabel.text = "Preset: \(animatedView.animation)"
-        curveLabel.text = "Curve: \(animatedView.curve)"
-        forceLabel.text = String(format: "Force: %.2f", animatedView.force)
-        durationLabel.text = String(format: "Duration: %.2f", animatedView.duration)
-        delayLabel.text = String(format: "Delay: %.2f", animatedView.delay)
+        presetLabel.text = "Preset: \(currentAnimation.animation)"
+        curveLabel.text = "Curve: \(currentAnimation.curve)"
+        forceLabel.text = String(format: "Force: %.2f", currentAnimation.force)
+        durationLabel.text = String(format: "Duration: %.2f", currentAnimation.duration)
+        delayLabel.text = String(format: "Delay: %.2f", currentAnimation.delay)
     }
     
     private func updateButton() {
-        animationButton.setTitle(nextPreset, for: .normal)
-    }
-    
-    private func getRandomPreset() -> String {
-        return Spring.AnimationPreset.allCases.randomElement()?.rawValue ?? ""
+        animationButton.setTitle(currentAnimation.animation, for: .normal)
     }
 }
 
