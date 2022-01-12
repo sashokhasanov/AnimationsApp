@@ -25,15 +25,15 @@ class AnimationsViewController: UIViewController {
     @IBAction func buttonPressed() {
         prepareForAnimation()
         animatedView.animate()
+        
+        currentAnimation = AnimationModel.getRandomAnimation()
+        updateButton()
     }
 
     // MARK: - Private methods
     private func prepareForAnimation() {
         updateAnimatedView()
         updateLabels()
-        
-        currentAnimation = AnimationModel.getRandomAnimation()
-        updateButton()
     }
     
     private func updateAnimatedView() {
