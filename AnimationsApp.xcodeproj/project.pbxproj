@@ -14,6 +14,7 @@
 		2D205E7D278DC5100084863A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D205E7C278DC5100084863A /* Assets.xcassets */; };
 		2D205E80278DC5100084863A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D205E7E278DC5100084863A /* LaunchScreen.storyboard */; };
 		2D205E8B278EF6420084863A /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D205E8A278EF6420084863A /* AnimationModel.swift */; };
+		2D205E8E278F20990084863A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D205E8D278F20990084863A /* DataManager.swift */; };
 		6523F25DB85ACEA8B33CAB97 /* Pods_AnimationsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7283C54C3A4BA028DEEC021 /* Pods_AnimationsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		2D205E7F278DC5100084863A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D205E81278DC5100084863A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D205E8A278EF6420084863A /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
+		2D205E8D278F20990084863A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AFC72C9DC96C434BD335353A /* Pods-AnimationsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationsApp.release.xcconfig"; path = "Target Support Files/Pods-AnimationsApp/Pods-AnimationsApp.release.xcconfig"; sourceTree = "<group>"; };
 		C92DC141949FE99CCACDAA50 /* Pods-AnimationsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationsApp.debug.xcconfig"; path = "Target Support Files/Pods-AnimationsApp/Pods-AnimationsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E7283C54C3A4BA028DEEC021 /* Pods_AnimationsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 		2D205E72278DC50D0084863A /* AnimationsApp */ = {
 			isa = PBXGroup;
 			children = (
+				2D205E8F278F224A0084863A /* Service */,
 				2D205E8C278EF9800084863A /* Model */,
 				2D205E87278DEF980084863A /* Storyboard */,
 				2D205E88278DEFD20084863A /* ViewControllers */,
@@ -116,6 +119,14 @@
 				2D205E8A278EF6420084863A /* AnimationModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2D205E8F278F224A0084863A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2D205E8D278F20990084863A /* DataManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		31A274A49C0CD7AB3BC92939 /* Frameworks */ = {
@@ -242,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D205E8B278EF6420084863A /* AnimationModel.swift in Sources */,
+				2D205E8E278F20990084863A /* DataManager.swift in Sources */,
 				2D205E78278DC50D0084863A /* AnimationsViewController.swift in Sources */,
 				2D205E74278DC50D0084863A /* AppDelegate.swift in Sources */,
 				2D205E76278DC50D0084863A /* SceneDelegate.swift in Sources */,

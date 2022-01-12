@@ -5,26 +5,23 @@
 //  Created by Сашок on 12.01.2022.
 //
 
-import Spring
+import Foundation
 
 struct AnimationModel {
     let animation: String
     let curve: String
-    let force: CGFloat
-    let duration: CGFloat
-    let delay: CGFloat
+    let force: Float
+    let duration: Float
+    let delay: Float
     
-    static func getRandomAnimation() -> AnimationModel {
-        let preset = Spring.AnimationPreset.allCases.randomElement()?.rawValue ?? ""
-        let curve = (Spring.AnimationCurve.allCases.randomElement() ?? .easeIn).rawValue
-        let force = CGFloat.random(in: 0.5...1)
-        let duration = CGFloat.random(in: 0.5...1)
-        let delay = CGFloat.random(in: 0...0.2)
-        
-        return AnimationModel(animation: preset,
-                              curve: curve,
-                              force: force,
-                              duration: duration,
-                              delay: delay)
+    var description: String {
+        String(format: """
+                        Preset: \(animation)
+                        Curve: \(curve)
+                        Force: %.2f
+                        Duration: %.2f
+                        Delay: %.2f
+                       """,
+               arguments: [force, duration, delay])
     }
 }

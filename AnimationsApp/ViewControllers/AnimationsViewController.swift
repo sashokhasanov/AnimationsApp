@@ -6,54 +6,46 @@
 //
 
 import Spring
+import CoreGraphics
 
 class AnimationsViewController: UIViewController {
 
     // MARK: - IBOUtlets
     @IBOutlet weak var animatedView: SpringView!
     @IBOutlet weak var animationButton: UIButton!
-    @IBOutlet weak var presetLabel: UILabel!
-    @IBOutlet weak var curveLabel: UILabel!
-    @IBOutlet weak var forceLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var delayLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: - Private properties
-    private var currentAnimation = AnimationModel.getRandomAnimation()
+    private var currentAnimation = DataManager.instance.getRandomAnimation()
 
     // MARK: - IBActions
     @IBAction func buttonPressed() {
         prepareForAnimation()
         animatedView.animate()
         
-        currentAnimation = AnimationModel.getRandomAnimation()
+        currentAnimation = DataManager.instance.getRandomAnimation()
         updateButton()
     }
 
     // MARK: - Private methods
     private func prepareForAnimation() {
         updateAnimatedView()
-        updateLabels()
+        updateDescriptionLabel()
     }
     
     private func updateAnimatedView() {
         animatedView.animation = currentAnimation.animation
         animatedView.curve = currentAnimation.curve
-        animatedView.force = currentAnimation.force
-        animatedView.duration = currentAnimation.duration
-        animatedView.delay = currentAnimation.delay
+        animatedView.force = CGFloat(currentAnimation.force)
+        animatedView.duration = CGFloat(currentAnimation.duration)
+        animatedView.delay = CGFloat(currentAnimation.delay)
     }
     
-    private func updateLabels() {
-        presetLabel.text = "Preset: \(currentAnimation.animation)"
-        curveLabel.text = "Curve: \(currentAnimation.curve)"
-        forceLabel.text = String(format: "Force: %.2f", currentAnimation.force)
-        durationLabel.text = String(format: "Duration: %.2f", currentAnimation.duration)
-        delayLabel.text = String(format: "Delay: %.2f", currentAnimation.delay)
+    private func updateDescriptionLabel() {
+        descriptionLabel.text = currentAnimation.description
     }
     
     private func updateButton() {
         animationButton.setTitle(currentAnimation.animation, for: .normal)
     }
 }
-

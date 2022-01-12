@@ -20,48 +20,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJ1-Cp-EOO" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="48" y="60" width="224" height="140"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hQb-z1-7vr">
-                                        <rect key="frame" x="15" y="17.5" width="194" height="105"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preset:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXs-jQ-CYg">
-                                                <rect key="frame" x="0.0" y="0.0" width="194" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curve:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGC-Pu-A94">
-                                                <rect key="frame" x="0.0" y="22" width="194" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Force:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms9-D4-qxG">
-                                                <rect key="frame" x="0.0" y="44" width="194" height="17"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDm-vN-dHN">
-                                                <rect key="frame" x="0.0" y="66" width="194" height="17"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSM-bL-hfu">
-                                                <rect key="frame" x="0.0" y="88" width="194" height="17"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXs-jQ-CYg">
+                                        <rect key="frame" x="15" y="15" width="194" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nJ1-Cp-EOO" secondAttribute="height" multiplier="16:10" id="Aub-zs-j2Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="hQb-z1-7vr" secondAttribute="trailing" constant="15" id="WWo-Gi-Jrr"/>
-                                    <constraint firstItem="hQb-z1-7vr" firstAttribute="leading" secondItem="nJ1-Cp-EOO" secondAttribute="leading" constant="15" id="fsk-K2-7tu"/>
-                                    <constraint firstItem="hQb-z1-7vr" firstAttribute="centerY" secondItem="nJ1-Cp-EOO" secondAttribute="centerY" id="hcb-cb-SVV"/>
+                                    <constraint firstAttribute="trailing" secondItem="PXs-jQ-CYg" secondAttribute="trailing" constant="15" id="FTH-7Q-b9D"/>
+                                    <constraint firstItem="PXs-jQ-CYg" firstAttribute="top" secondItem="nJ1-Cp-EOO" secondAttribute="top" constant="15" id="XtF-Q2-Vd9"/>
+                                    <constraint firstItem="PXs-jQ-CYg" firstAttribute="leading" secondItem="nJ1-Cp-EOO" secondAttribute="leading" constant="15" id="xaD-e1-ALO"/>
+                                    <constraint firstAttribute="bottom" secondItem="PXs-jQ-CYg" secondAttribute="bottom" constant="15" id="zi7-fA-6cu"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -100,11 +72,7 @@
                     <connections>
                         <outlet property="animatedView" destination="nJ1-Cp-EOO" id="f0Z-hc-lyT"/>
                         <outlet property="animationButton" destination="mK3-4y-qgZ" id="p36-Vf-Xeq"/>
-                        <outlet property="curveLabel" destination="zGC-Pu-A94" id="Dsx-fg-0dg"/>
-                        <outlet property="delayLabel" destination="SSM-bL-hfu" id="jQA-sf-LZN"/>
-                        <outlet property="durationLabel" destination="LDm-vN-dHN" id="oz2-lV-1YT"/>
-                        <outlet property="forceLabel" destination="ms9-D4-qxG" id="JAu-r7-gBm"/>
-                        <outlet property="presetLabel" destination="PXs-jQ-CYg" id="k7J-u3-jna"/>
+                        <outlet property="descriptionLabel" destination="PXs-jQ-CYg" id="QLK-Qc-4aX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
