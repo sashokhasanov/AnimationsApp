@@ -16,14 +16,14 @@ class AnimationsViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: - Private properties
-    private var currentAnimation = DataManager.instance.getRandomAnimation()
+    private var currentAnimation = AnimationModel.getRandomAnimation()
 
     // MARK: - IBActions
     @IBAction func buttonPressed() {
         prepareForAnimation()
         animatedView.animate()
         
-        currentAnimation = DataManager.instance.getRandomAnimation()
+        currentAnimation = AnimationModel.getRandomAnimation()
         updateButton()
     }
 

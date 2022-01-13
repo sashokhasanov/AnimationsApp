@@ -24,4 +24,18 @@ struct AnimationModel {
                        """,
                arguments: [force, duration, delay])
     }
+    
+    static func getRandomAnimation() -> AnimationModel {
+        let preset = DataManager.instance.animations.randomElement()?.rawValue ?? ""
+        let curve = (DataManager.instance.curves.randomElement() ?? .easeIn).rawValue
+        let force = Float.random(in: 0.5...1)
+        let duration = Float.random(in: 0.5...1)
+        let delay = Float.random(in: 0...0.2)
+        
+        return AnimationModel(animation: preset,
+                              curve: curve,
+                              force: force,
+                              duration: duration,
+                              delay: delay)
+    }
 }
